@@ -79,7 +79,7 @@ const AddUser = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const newKey = chipData.length > 0 ? chipData[chipData.length - 1].key + 1 : 0;
-    setChipData([...chipData, {key: newKey, label: newPill}]);
+    setChipData([ {key: newKey, label: newPill}, ...chipData ]);
     setNewPill('');
   }
 
